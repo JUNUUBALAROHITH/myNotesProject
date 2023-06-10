@@ -11,7 +11,7 @@ const mongoOptions = {
     useUnifiedTopology: true
 }
 
-const dbUrl = process.env.MONGO_URL
+const dbUrl = "mongodb+srv://rohith:rahul@cluster0.9aimtmk.mongodb.net/?retryWrites=true&w=majority"
 
 mongoose.connect(dbUrl, mongoOptions)
 .then(() => {
