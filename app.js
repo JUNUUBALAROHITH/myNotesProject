@@ -11,7 +11,9 @@ const mongoOptions = {
     useUnifiedTopology: true
 }
 
-mongoose.connect(process.env.MONGO_URL, mongoOptions)
+const dbUrl = process.env.MONGO_URL
+
+mongoose.connect(dbUrl, mongoOptions)
 .then(() => {
     app.listen(3000, () => {
         console.log("APP IS LISTENING ON PORT 3000!")
